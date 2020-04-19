@@ -12,7 +12,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Saimonden03\\": "src/"
+            "Saimondev03\\": "src/"
         }
     },
     "autoload-dev": {
