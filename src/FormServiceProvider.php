@@ -12,7 +12,8 @@ class FormServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'saimondev03-form');
 
-        Blade::component(Form::class,'form');
+        Blade::component('Saimondev03\Form','form');
+        Blade::component('Saimondev03\Field', 'field');
     }
 
 }

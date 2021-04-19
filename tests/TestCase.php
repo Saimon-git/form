@@ -10,4 +10,14 @@ class TestCase extends \Orchestra\Testbench\TestCase
     {
         return ['Saimondev03\FormServiceProvider'];
     }
+    protected function assertTemplateRenders($expectedHtml, $actualTemplate)
+    {
+        $this->makeTemplate($actualTemplate)
+            ->assertRender($expectedHtml);
+    }
+
+    protected function makeTemplate($actualTemplate): Template
+    {
+        return $this->app[Template::class]->setContent($actualTemplate);
+    }
 }
