@@ -2,6 +2,7 @@
 
 namespace Saimondev03;
 
+use Illuminate\Config\Repository;
 use Illuminate\View\Component;
 
 class Field extends Component
@@ -11,9 +12,30 @@ class Field extends Component
      */
     public $name;
 
-    public function __construct(string $name)
+    /**
+     * @var false|mixed
+     */
+    public $required;
+    /**
+     * @var Repository
+     */
+    private $config;
+
+    public function __construct(Repository $config,string $name, $required = false)
     {
         $this->name = $name;
+        $this->required = $required;
+        $this->config = $config;
+    }
+
+    public function highlightsRequirement()
+    {
+        return $this->config->get('form.highlights_requirement') === 'required' && $this->required;
+    }
+
+    public function highlightsOptional()
+    {
+        return $this->config->get('form.highlights_requirement') === 'optional' && ! $this->required;
     }
 
     public function render()
