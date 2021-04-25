@@ -1,24 +1,34 @@
-name: Run Test
+name: Run Tests
 
 on:
   push:
-    branches: [master]
   pull_request:
   schedule:
-    - cron: "0 0 * * * "
+    - cron: "0 0 * * *"
 
 jobs:
   tests:
-    runs-on: ubuntu-latest
-    name: Test
+    strategy:
+      fail-fast: true
+      matrix:
+        os: [ubuntu-latest]
+        php: [7.2, 7.3, 7.4]
+        stability: [prefer-lowest, prefer-stable]
+    runs-on: ${{ matrix.os }}
+    name: PHP${{ matrix.php }} in ${{ matrix.os }} (${{ matrix.stability }})
     steps:
       - uses: actions/checkout@v2
-      - name: set up php
+      - name: Cache Composer Packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.composer/cache/files
+          key: os-${{ matrix.os }}-php${{ matrix.php }}-composer-${{ matrix.stability }}-${{ hashFiles('composer.json') }}
+      - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version:  7.3
-          extensions: mbstring
+          php-version: ${{ matrix.php }}
+          extensions: mbstring, fileinfo
       - name: Install dependencies
-        run:  composer install --prefer-dist --no-interaction
-      - name: Run Tests
+        run: composer update --${{ matrix.stability }} --prefer-dist --no-interaction --no-progress
+      - name: Run tests
         run: vendor/bin/phpunit
