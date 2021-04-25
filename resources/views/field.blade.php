@@ -1,9 +1,9 @@
 <div class="form-group{{$required ? ' required' : ' optional' }}">
         <label for="{{ $name }}">
                 {{ ucfirst($name) }}
-                @if ($highlightsRequired)
+                @if ($highlightsRequired())
                         <span class="badge badge-danger">{{ __('required')  }}</span>
-                @elseif ($highlightsOptional)
+                @elseif ($highlightsOptional())
                         <span class="badge badge-info">{{ __('optional')  }}</span>
                 @endif
         </label>
