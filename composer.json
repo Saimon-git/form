@@ -31,7 +31,7 @@
     "minimum-stability": "stable",
     "extra": {
         "laravel": {
-            "providers": ['Saimondev03\\FormServiceProvider']
+            "providers": ["Saimondev03\\FormServiceProvider"]
         }
     }
 }
