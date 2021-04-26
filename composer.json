@@ -1,6 +1,10 @@
 {
     "name": "saimondev03/form",
     "description": "Advanced form generation for Laravel",
+    "keywords": [
+        "form",
+        "laravel",
+    ],
     "type": "library",
     "require": {
         "php": "^7.3 || ^8.0",
