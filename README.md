@@ -20,7 +20,7 @@ You can use `<x-field />` to create your new form field
 
 You can customize the form field by passing attributes such as `name, id, class, type, etc.`
 
-##Component rendering
+## Component rendering
 
 To render the component, you can use a Blade component tag inside one of your Blade templates. 
 Blade component tags begin with the string x- followed by the component name:
