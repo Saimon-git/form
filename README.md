@@ -26,11 +26,11 @@ To render the component, you can use a Blade component tag inside one of your Bl
 Blade component tags begin with the string x- followed by the component name:
 ```
 <x-form>
-<x-field/>
+    <x-field />
 </x-form>
 
 <x-form>
-<x-field name="name" type="text" class="clasname" required />
+    <x-field name="name" type="text" class="clasname" required />
 </x-form>
 ```
 
