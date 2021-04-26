@@ -1,7 +1,7 @@
 # Saimondev03 Form
 ![](https://github.com/Saimon-git/form/workflows/run-tests/badge.svg)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/saimondev03/form.svg?style=flat-square)](https://packagist.org/packages/saimondev03/form)
-[![Quality Score](https://img.shields.io/scrutinizer/g/saimondev03/form.svg?style=flat-square)](https://scrutinizer-ci.com/g/saimondev03/form)
+[![Quality Score](https://img.shields.io/scrutinizer/g/saimondev03/form.svg?style=flat-square)](https://scrutinizer-ci.com/g/Saimon-git/form)
 [![Total Downloads](https://img.shields.io/packagist/dt/saimondev03/form.svg?style=flat-square)](https://packagist.org/packages/saimondev03/form)
 
 Advanced form generation for Laravel.
