@@ -86,7 +86,7 @@ class FieldTest extends TestCase
         $this->app['translator']->setLocale('es');
         $this->app['translator']->addLines([
             '*.required'    => 'Obligatorio'
-        ], 'es' );
+        ], 'es');
 
         $this->makeTemplate('<x-field name="email" type="email" required />')
             ->assertContain('<span class="badge badge-danger">Obligatorio</span>');
@@ -99,7 +99,7 @@ class FieldTest extends TestCase
         $this->app['translator']->setLocale('es');
         $this->app['translator']->addLines([
             '*.optional'    => 'Opcional'
-        ], 'es' );
+        ], 'es');
 
         $this->makeTemplate('<x-field name="email" type="email" />')
             ->assertContain('<span class="badge badge-info">Opcional</span>');
