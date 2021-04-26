@@ -3,7 +3,7 @@
     "description": "Advanced form generation for Laravel",
     "keywords": [
         "form",
-        "laravel",
+        "laravel"
     ],
     "type": "library",
     "require": {
