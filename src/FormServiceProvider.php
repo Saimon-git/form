@@ -15,8 +15,7 @@ class FormServiceProvider extends ServiceProvider
         //$this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'form');
         $this->loadJsonTranslationsFrom(__DIR__.'/../resources/lang');
 
-        Blade::component('Saimondev03\Form','form');
+        Blade::component('Saimondev03\Form', 'form');
         Blade::component('Saimondev03\Field', 'field');
     }
-
 }

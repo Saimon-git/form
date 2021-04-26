@@ -3,7 +3,6 @@
 
 namespace Saimondev03;
 
-
 use Illuminate\View\Component;
 
 class Form extends Component
@@ -35,5 +34,4 @@ class Form extends Component
     {
         return view('saimondev03-form::form');
     }
-
 }

@@ -21,7 +21,7 @@ class Field extends Component
      */
     private $config;
 
-    public function __construct(Repository $config,string $name, $required = false)
+    public function __construct(Repository $config, string $name, $required = false)
     {
         $this->name = $name;
         $this->required = $required;
