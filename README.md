@@ -1,8 +1,9 @@
 # Saimondev03 Form
-![](https://github.com/Saimon-git/form/workflows/run-tests/badge.svg)
+[![Build Status](https://scrutinizer-ci.com/g/Saimon-git/form/badges/build.png?b=master)](https://scrutinizer-ci.com/g/Saimon-git/form/build-status/master)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/saimondev03/form.svg?style=flat-square)](https://packagist.org/packages/saimondev03/form)
-[![Quality Score](https://img.shields.io/scrutinizer/g/saimondev03/form.svg?style=flat-square)](https://scrutinizer-ci.com/g/Saimon-git/form)
-[![Total Downloads](https://img.shields.io/packagist/dt/saimondev03/form.svg?style=flat-square)](https://packagist.org/packages/saimondev03/form)
+[![Total Downloads](https://poser.pugx.org/saimondev03/form/downloads)](//packagist.org/packages/saimondev03/form)
+[![Version](https://poser.pugx.org/saimondev03/form/version)](//packagist.org/packages/saimondev03/form)
+[![GitHub license](https://img.shields.io/github/license/Saimon-git/form)](https://github.com/Saimon-git/form/blob/master/LICENSE.md)
 
 Advanced form generation for Laravel.
 
