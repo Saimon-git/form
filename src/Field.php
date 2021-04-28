@@ -13,7 +13,7 @@ class Field extends Component
     public $name;
 
     /**
-     * @var true\mixed
+     * @var true|mixed
      */
     public $label;
 
@@ -46,7 +46,6 @@ class Field extends Component
 
     public function highlightsLabel()
     {
-        //dd($this->label);
         return $this->label === true;
     }
 
