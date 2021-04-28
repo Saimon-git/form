@@ -13,7 +13,7 @@ class Field extends Component
     public $name;
 
     /**
-     * @var true|mixed
+     * @var bool
      */
     public $label;
 
