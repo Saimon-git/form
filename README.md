@@ -7,6 +7,11 @@
 
 Advanced form generation for Laravel.
 
+## Requeriments
+The current package requeriments are:
+- Laravel >= 7.3
+- PHP >= 7.3
+
 ## Installation
 
 You can install the package via composer:

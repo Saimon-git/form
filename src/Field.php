@@ -13,6 +13,11 @@ class Field extends Component
     public $name;
 
     /**
+     * @var true\mixed
+     */
+    public $label;
+
+    /**
      * @var false|mixed
      */
     public $required;
@@ -21,10 +26,11 @@ class Field extends Component
      */
     private $config;
 
-    public function __construct(Repository $config, string $name, $required = false)
+    public function __construct(Repository $config, string $name, $required = false, $label = true)
     {
         $this->name = $name;
         $this->required = $required;
+        $this->label = $label;
         $this->config = $config;
     }
 
@@ -36,6 +42,12 @@ class Field extends Component
     public function highlightsOptional()
     {
         return $this->config->get('form.highlights_requirement') === 'optional' && ! $this->required;
+    }
+
+    public function highlightsLabel()
+    {
+        //dd($this->label);
+        return $this->label === true;
     }
 
     public function render()

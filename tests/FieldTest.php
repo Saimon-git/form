@@ -104,4 +104,15 @@ class FieldTest extends TestCase
         $this->makeTemplate('<x-field name="email" type="email" />')
             ->assertContain('<span class="badge badge-info">Opcional</span>');
     }
+
+    /** @test */
+    function renders_a_field_without_label()
+    {
+        $this->makeTemplate('<x-field label="false" name="email" type="email"  />')
+            ->assertRender('
+              <div class="form-group optional">
+                <input name="email" type="email" class="form-control" id="email">
+              </div>
+            ');
+    }
 }
