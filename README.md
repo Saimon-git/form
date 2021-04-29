@@ -26,6 +26,8 @@ You can use `<x-field />` to create your new form field
 
 You can customize the form field by passing attributes such as `name, id, class, type, etc.`
 
+You can customize the form methods by passing the method in the form component with respective name example `get, post, put, patch, delete.`
+
 ## Component rendering
 
 To render the component, you can use a Blade component tag inside one of your Blade templates. 
