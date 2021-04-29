@@ -40,7 +40,7 @@ Blade component tags begin with the string x- followed by the component name:
 </x-form>
 ```
 
-## Component  Field rendering whitout label
+## Component  Field rendering without label
 ```
 <x-form method="method">
     <x-field label="false" name="name" type="text" class="clasname" required />
